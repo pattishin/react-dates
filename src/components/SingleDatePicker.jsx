@@ -224,6 +224,10 @@ class SingleDatePicker extends React.Component {
     } else {
       this.onDayPickerBlur();
     }
+    
+    if (!withAnyPortal) {
+      this.responsivizePickerPosition();
+    }
 
     if (!disabled) {
       onFocusChange({ focused: true });
